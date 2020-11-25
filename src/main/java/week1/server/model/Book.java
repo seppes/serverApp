@@ -1,21 +1,25 @@
 package week1.server.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Book {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_generator")
+    @SequenceGenerator(name = "book_generator", sequenceName = "book_seq", allocationSize = 1)
     @Id
-    private String title;
-    private int aantalPaginas;
-
-    public Book(String title, int aantalPaginas) {
-        this.title = title;
-        this.aantalPaginas = aantalPaginas;
-    }
+    int id;
+    String title;
+    int pages; //this is not normalized but I don't care for this example
 
     public Book() {
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -26,11 +30,11 @@ public class Book {
         this.title = title;
     }
 
-    public int getAantalPaginas() {
-        return aantalPaginas;
+    public int getPages() {
+        return pages;
     }
 
-    public void setAantalPaginas(int aantalPaginas) {
-        this.aantalPaginas = aantalPaginas;
+    public void setPages(int author) {
+        this.pages = author;
     }
 }
