@@ -1,9 +1,7 @@
 package week1.server.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import week1.server.model.Book;
 import week1.server.repositories.BookRepository;
 
@@ -19,6 +17,12 @@ public class BookController {
     private BookRepository bookRepository;
 
     @CrossOrigin
+    @PostMapping("/books")
+    public Book create(@RequestBody Book book){
+        return bookRepository.save(book);
+    }
+
+
     @GetMapping("/books")
     public Iterable<Book> findAll() {
         Iterable<Book> books = bookRepository.findAll();
