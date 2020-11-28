@@ -1,25 +1,25 @@
 insert into BOOK
 (ID, TITLE, PAGES)
 values
-(1, 'Oryx and Crake', 252);
+(nextval('BOOK_SEQ'), 'Oryx and Crake', 252);
 
 insert into BOOK
 (ID, TITLE, PAGES)
 values
-(2, 'The year of the flood', 188);
+(nextval('BOOK_SEQ'), 'The year of the flood', 188);
 
 insert into BOOK
 (ID, TITLE, PAGES)
 values
-(3, 'MaddAddam', 304);
+(nextval('BOOK_SEQ'), 'MaddAddam', 304);
 
 insert into BOOK
 (ID, TITLE, PAGES)
 values
-(4, '1Q84', 285);
+(nextval('BOOK_SEQ'), '1Q84', 285);
 
 insert into BOOK
 (ID, TITLE, PAGES)
 values
-(5, 'De opwindvogelkronieken', 198);
+(nextval('BOOK_SEQ'), 'De opwindvogelkronieken', 198);
 
