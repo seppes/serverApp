@@ -9,7 +9,7 @@ public class Book {
     @Id
     int id;
     String title;
-    int pages; //this is not normalized but I don't care for this example
+    int pages;
 
     public Book() {
     }
