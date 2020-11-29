@@ -23,3 +23,8 @@ insert into BOOK
 values
 (nextval('BOOK_SEQ'), 'De opwindvogelkronieken', 198);
 
+insert into BOOK
+(ID, TITLE, PAGES)
+values
+(nextval('BOOK_SEQ'), 'TESTESTEST', 420);
+
