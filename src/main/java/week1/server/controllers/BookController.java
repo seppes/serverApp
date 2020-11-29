@@ -5,9 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import week1.server.model.Book;
 import week1.server.repositories.BookRepository;
 
-import java.util.Arrays;
-import java.util.List;
-
 import static java.lang.Thread.sleep;
 
 @RestController
@@ -19,6 +16,11 @@ public class BookController {
     @CrossOrigin
     @PostMapping("/books")
     public Book create(@RequestBody Book book){
+        try {
+            sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return bookRepository.save(book);
     }
 
@@ -33,4 +35,18 @@ public class BookController {
         }
         return books;
     }
+
+//    @CrossOrigin
+//    @DeleteMapping(path = "/{id}")
+//    public ResponseEntity <Void> deleteBook(@PathVariable Book id)
+//    {
+//        book.remove(id);
+//        return ResponseEntity.noContent().build();
+//    }
+    @CrossOrigin
+    @DeleteMapping("/books")
+    public void delete (@RequestBody Book book) {
+        bookRepository.deleteById(book.getId());
+    }
+
 }
