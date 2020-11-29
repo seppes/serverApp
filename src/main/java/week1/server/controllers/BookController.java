@@ -22,7 +22,7 @@ public class BookController {
         return bookRepository.save(book);
     }
 
-
+    @CrossOrigin
     @GetMapping("/books")
     public Iterable<Book> findAll() {
         Iterable<Book> books = bookRepository.findAll();
