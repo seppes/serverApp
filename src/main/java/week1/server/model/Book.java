@@ -9,7 +9,7 @@ public class Book {
     @Id
     int id;
     String title;
-    int pages;
+    String author;
 
     public Book() {
     }
@@ -30,11 +30,12 @@ public class Book {
         this.title = title;
     }
 
-    public int getPages() {
-        return pages;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setPages(int author) {
-        this.pages = author;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
+

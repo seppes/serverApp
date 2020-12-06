@@ -1,30 +1,24 @@
 insert into BOOK
-(ID, TITLE, PAGES)
+(ID, TITLE, AUTHOR)
 values
-(nextval('BOOK_SEQ'), 'Oryx and Crake', 252);
+(nextval('BOOK_SEQ'), 'Oryx and Crake', 'Margaret Atwood');
 
 insert into BOOK
-(ID, TITLE, PAGES)
+(ID, TITLE, AUTHOR)
 values
-(nextval('BOOK_SEQ'), 'The year of the flood', 188);
+(nextval('BOOK_SEQ'), 'The year of the flood', 'Margaret Atwood');
 
 insert into BOOK
-(ID, TITLE, PAGES)
+(ID, TITLE, AUTHOR)
 values
-(nextval('BOOK_SEQ'), 'MaddAddam', 304);
+(nextval('BOOK_SEQ'), 'MaddAddam', 'Margaret Atwood');
 
 insert into BOOK
-(ID, TITLE, PAGES)
+(ID, TITLE, AUTHOR)
 values
-(nextval('BOOK_SEQ'), '1Q84', 285);
+(nextval('BOOK_SEQ'), '1Q84', 'Haruki Murakami');
 
 insert into BOOK
-(ID, TITLE, PAGES)
+(ID, TITLE, AUTHOR)
 values
-(nextval('BOOK_SEQ'), 'De opwindvogelkronieken', 198);
-
-insert into BOOK
-(ID, TITLE, PAGES)
-values
-(nextval('BOOK_SEQ'), 'TESTESTEST', 420);
-
+(nextval('BOOK_SEQ'), 'De opwindvogelkronieken', 'Haruki Murakami');
