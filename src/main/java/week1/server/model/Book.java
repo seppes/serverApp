@@ -1,6 +1,12 @@
 package week1.server.model;
 
+
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+
 
 @Entity
 public class Book {
@@ -8,8 +14,11 @@ public class Book {
     @SequenceGenerator(name = "book_generator", sequenceName = "book_seq", allocationSize = 1)
     @Id
     int id;
+    @NotBlank(message = "title should not be blank") @NotNull
     String title;
     String author;
+    @Positive(message = "price can not be 0 or below")
+    int price;
 
     public Book() {
     }
@@ -37,5 +46,9 @@ public class Book {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    public int getPrice() { return price; }
+
+    public void setPrice(int price) { this.price = price; }
 }
 

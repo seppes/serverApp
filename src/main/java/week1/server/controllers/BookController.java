@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -38,7 +39,7 @@ public class BookController {
     @CrossOrigin
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping("/books")
-    public Book create(@RequestBody Book book) {
+    public Book create(@Valid  @RequestBody Book book) {
         logger.info("##### create");
         Optional<Book> bookFromDb = bookRepository.findByTitle(book.getTitle());
         if (bookFromDb.isPresent()){
